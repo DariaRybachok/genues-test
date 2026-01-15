@@ -57,12 +57,26 @@
   --dog-landing-3-c10: #ff6e9f;
 }
 
+* {
+  box-sizing: border-box;
+}
+
 body {
   color: var(--bakery-landing-1-s1);
   font-family: 'Poppins', sans-serif;
   font-size: 18px;
   font-weight: 400;
   line-height: 1.5;
+  margin: 0;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+  margin-top: 0;
 }
 
 address {
@@ -71,6 +85,26 @@ address {
 
 ul {
   list-style-type: none;
+}
+
+.visually-hidden {
+  position: absolute;
+  left: -10000px;
+  top: auto;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+}
+
+.container {
+  width: 100%;
+  max-width: 1288px;
+  margin: 0 auto;
+  padding: 0 24px;
+}
+
+.section {
+  padding: 48px 0;
 }
 
 /* Button */
@@ -106,10 +140,12 @@ ul {
 }
 
 /* Hero Section */
-.hero-tile {
+.hero-section {
+  padding: 272px 0;
 }
 
-.hero-tile h1 {
+.hero-tile {
+  margin-bottom: 0;
   color: var(--bakery-landing-1-background);
   text-align: center;
   font-weight: 900;
@@ -121,6 +157,14 @@ ul {
 }
 
 /* Tradition Section */
+.tradition-section {
+  padding-top: 96px;
+}
+
+.tradition-title {
+  margin-bottom: 42px;
+}
+
 .advantages-list {
   background-color: var(--bakery-landing-1-s3);
   color: var(--bakery-landing-1-background);
@@ -147,12 +191,21 @@ ul {
 }
 
 /* Chefs section */
+.chefs-title {
+  margin-bottom: 80px;
+}
+
 .chefs-name {
   font-weight: 600;
   font-size: 40px;
+  margin-bottom: 16px;
 }
 
 /* Formats section */
+.formats-title {
+  margin-bottom: 80px;
+}
+
 .cards-name {
   font-weight: 600;
   font-size: 24px;
@@ -166,6 +219,10 @@ ul {
 }
 
 /* Contacts section */
+.contacts-title {
+  margin-bottom: 16px;
+}
+
 .contacts-section p {
   color: var(--bakery-landing-1-s3);
 }
