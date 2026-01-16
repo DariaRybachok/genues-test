@@ -80,11 +80,13 @@ p {
 }
 
 address {
-  text-decoration: none;
+  font-style: normal;
 }
 
 ul {
   list-style-type: none;
+  margin: 0;
+  padding: 0;
 }
 
 .visually-hidden {
@@ -135,8 +137,28 @@ ul {
 }
 
 .link:hover {
-  font-weight: 600;
   color: var(--bakery-landing-1-c2);
+}
+
+/* Header */
+.header-container {
+  display: flex;
+  align-items: center;
+  gap: 40px;
+}
+
+.header-nav {
+  flex-grow: 1;
+  display: flex;
+  align-items: center;
+  gap: 40px;
+}
+
+.header-menu {
+  display: flex;
+  gap: 64px;
+  flex-grow: 1;
+  justify-content: center;
 }
 
 /* Hero Section */
@@ -156,20 +178,42 @@ ul {
   color: var(--bakery-landing-1-s3);
 }
 
+/* Adventages section */
+.advantages-section {
+  padding: 16px 0;
+  background-color: var(--bakery-landing-1-s3);
+}
+
+.advantages-list {
+  display: flex;
+  justify-content: space-between;
+  gap: 40px;
+}
+
+.advantages-item {
+  font-weight: 300;
+  font-size: 20px;
+  color: var(--bakery-landing-1-background);
+}
+
 /* Tradition Section */
+
 .tradition-section {
   padding-top: 96px;
 }
 
-.tradition-title {
-  margin-bottom: 42px;
+.traditions-container {
+  display: flex;
+  justify-content: space-between;
+  gap: 40px;
 }
 
-.advantages-list {
-  background-color: var(--bakery-landing-1-s3);
-  color: var(--bakery-landing-1-background);
-  font-weight: 300;
-  font-size: 20px;
+.traditions-content {
+  max-width: 710px;
+}
+
+.tradition-title {
+  margin-bottom: 42px;
 }
 
 .section-title {
@@ -179,6 +223,10 @@ ul {
 
 .section-title .accent {
   color: var(--bakery-landing-1-s3);
+}
+
+.tradition-text {
+  max-width: 360px;
 }
 
 .uppercase {
@@ -204,6 +252,22 @@ ul {
 /* Formats section */
 .formats-title {
   margin-bottom: 80px;
+}
+
+.formats-list {
+  display: flex;
+  gap: 20px;
+}
+
+.formats-item {
+  flex-basis: calc((100% - 40px) / 3);
+  flex-wrap: wrap;
+}
+
+.cards {
+  border: 1px solid lightgray; /*remove*/
+  border-radius: 16px;
+  padding: 24px;
 }
 
 .cards-name {
