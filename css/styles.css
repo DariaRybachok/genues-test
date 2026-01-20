@@ -32,29 +32,12 @@
 }
 
 :root {
-  --bakery-landing-1-background: #faf4ea;
-  --bakery-landing-1-s1: #31261a;
-  --bakery-landing-1-c2: #819b57;
-  --bakery-landing-1-s3: #465929;
-  --bakery-landing-1-s4: #a18268;
-  --bakery-landing-1-c5: #cfcfbc;
-  --beauty-landing-2-background: #fff;
-  --beauty-landing-2-s2: #2b7fff;
-  --beauty-landing-2-c1: #011c44;
-  --beauty-landing-2-c3: #4a4a4a;
-  --beauty-landing-2-s4: #ffd02b;
-  --beauty-landing-2-s5: #747272;
-  --beauty-landing-2-c6: #011f4a;
-  --dog-landing-3-background: #fff;
-  --dog-landing-3-s1: #ff9f0e;
-  --dog-landing-3-s2: #fcb62a;
-  --dog-landing-3-c3: #fffaf3;
-  --dog-landing-3-c4: #181817;
-  --dog-landing-3-c5: #f1f3ff;
-  --dog-landing-3-c6: #839aa9;
-  --dog-landing-3-s8: #f9f9ff;
-  --dog-landing-3-c9: #d9a6ff;
-  --dog-landing-3-c10: #ff6e9f;
+  --color-primary-light: #faf4ea;
+  --color-primary-dark: #31261a;
+  --color-brand-normal: #819b57;
+  --color-brand-dark: #465929;
+  --color-secondary-dark: #a18268;
+  --color-brand-light: #cfcfbc;
 }
 
 * {
@@ -62,7 +45,8 @@
 }
 
 body {
-  color: var(--bakery-landing-1-s1);
+  background-color: var(--color-primary-light);
+  color: var(--color-primary-dark);
   font-family: 'Poppins', sans-serif;
   font-size: 18px;
   font-weight: 400;
@@ -111,13 +95,13 @@ ul {
 
 /* Button */
 .button {
-  border: 2px solid var(--bakery-landing-1-c2);
-  background: var(--bakery-landing-1-c2);
+  border: 2px solid var(--color-brand-normal);
+  background: var(--color-brand-normal);
   border-radius: 8px;
   padding: 16px 32px;
   min-width: 238px;
   font-weight: 600;
-  color: var(--bakery-landing-1-background);
+  color: var(--color-primary-light);
   cursor: pointer;
   font-family: 'Poppins', sans-serif;
   font-size: 18px;
@@ -126,18 +110,18 @@ ul {
 
 .button:hover {
   background-color: transparent;
-  color: var(--bakery-landing-1-s3);
+  color: var(--color-brand-dark);
 }
 
 /* Link */
 .link {
   text-align: center;
-  color: var(--bakery-landing-1-background);
+  color: var(--color-primary-light);
   text-decoration: none;
 }
 
 .link:hover {
-  color: var(--bakery-landing-1-c2);
+  color: var(--color-brand-normal);
 }
 
 /* Header */
@@ -164,24 +148,28 @@ ul {
 /* Hero Section */
 .hero-section {
   padding: 272px 0;
+  background-image: url('../img/couple-in-bakery.jpg');
+  background-repeat: no-repeat;
+  background-position: center top;
+  background-size: cover;
 }
 
 .hero-tile {
   margin-bottom: 0;
-  color: var(--bakery-landing-1-background);
+  color: var(--color-primary-light);
   text-align: center;
   font-weight: 900;
   font-size: 128px;
 }
 
 .hero-tile .accent {
-  color: var(--bakery-landing-1-s3);
+  color: var(--color-brand-dark);
 }
 
 /* Adventages section */
 .advantages-section {
   padding: 16px 0;
-  background-color: var(--bakery-landing-1-s3);
+  background-color: var(--color-brand-dark);
 }
 
 .advantages-list {
@@ -193,7 +181,7 @@ ul {
 .advantages-item {
   font-weight: 300;
   font-size: 20px;
-  color: var(--bakery-landing-1-background);
+  color: var(--color-primary-light);
 }
 
 /* Tradition Section */
@@ -221,8 +209,12 @@ ul {
   font-size: 64px;
 }
 
+.section-title.centered {
+  text-align: center;
+}
+
 .section-title .accent {
-  color: var(--bakery-landing-1-s3);
+  color: var(--color-brand-dark);
 }
 
 .tradition-text {
@@ -234,13 +226,29 @@ ul {
 }
 
 .colorBrand {
-  color: var(--bakery-landing-1-c2);
+  color: var(--color-brand-normal);
   font-weight: 600;
 }
 
 /* Chefs section */
+.chef-photo {
+  border-radius: 4px 4px 4px 200px;
+  box-shadow:
+    -16px 16px 0 0 var(--color-primary-light),
+    -16px 16px 0 2px var(--color-secondary-dark);
+}
+
 .chefs-title {
-  margin-bottom: 80px;
+  margin: 0 auto 80px;
+  max-width: 520px;
+}
+
+.chefs-title::after,
+.chefs-title::before {
+  display: block;
+  width: 352px;
+  border: 2px solid var(--color-brand-light);
+  content: ' ';
 }
 
 .chefs-name {
@@ -265,6 +273,13 @@ ul {
 }
 
 .cards {
+  height: 444px;
+  background: linear-gradient(
+    180deg,
+    rgba(49, 38, 26, 0) 55.21%,
+    rgba(49, 38, 26, 0.71) 72.92%,
+    var(--color-primary-dark) 100%
+  );
   border: 1px solid lightgray; /*remove*/
   border-radius: 16px;
   padding: 24px;
@@ -273,12 +288,12 @@ ul {
 .cards-name {
   font-weight: 600;
   font-size: 24px;
-  color: var(--bakery-landing-1-background);
+  color: var(--color-primary-light);
 }
 
 .cards p {
   font-weight: 300;
-  color: var(--bakery-landing-1-background);
+  color: var(--color-primary-light);
   font-size: 14px;
 }
 
@@ -288,12 +303,21 @@ ul {
 }
 
 .contacts-section p {
-  color: var(--bakery-landing-1-s3);
+  color: var(--color-brand-dark);
 }
 
 address li a {
   font-weight: 300;
   font-size: 16px;
-  color: var(--bakery-landing-1-background);
+  color: var(--color-primary-light);
   text-decoration: none;
+}
+
+/* Footer */
+.footer {
+  background-image: url('../img/footer-bgc.png');
+  background-color: var(--color-primary-dark);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
 }
