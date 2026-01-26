@@ -40,7 +40,9 @@
   --color-brand-light: #cfcfbc;
 }
 
-* {
+*,
+::after,
+::before {
   box-sizing: border-box;
 }
 
@@ -71,6 +73,10 @@ ul {
   list-style-type: none;
   margin: 0;
   padding: 0;
+}
+
+a {
+  display: inline-block;
 }
 
 .visually-hidden {
@@ -207,6 +213,7 @@ ul {
 .section-title {
   font-weight: 900;
   font-size: 64px;
+  line-height: 1.3;
 }
 
 .section-title.centered {
@@ -251,10 +258,33 @@ ul {
   content: ' ';
 }
 
+.chef-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 40px 30px;
+}
+
+.chef-item {
+  flex-basis: calc((100% - 30px) / 2);
+}
+
+.chef-card {
+  display: flex;
+  gap: 30px;
+}
+
 .chefs-name {
   font-weight: 600;
   font-size: 40px;
   margin-bottom: 16px;
+}
+
+.chef-text p {
+  margin-bottom: 24px;
+}
+
+.chef-text p:last-child {
+  margin-bottom: 0;
 }
 
 /* Formats section */
@@ -270,6 +300,12 @@ ul {
 .formats-item {
   flex-basis: calc((100% - 40px) / 3);
   flex-wrap: wrap;
+}
+
+.formats-container {
+  display: flex;
+  align-items: center;
+  gap: 32px;
 }
 
 .cards {
@@ -297,20 +333,46 @@ ul {
   font-size: 14px;
 }
 
+.cards-button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 44px;
+  height: 44px;
+  background-color: transparent;
+  border-radius: 50%;
+  border: 1px solid var(--color-primary-dark);
+  cursor: pointer;
+  flex-shrink: 0;
+}
+
+.cards-button img {
+  height: 16px;
+  width: 16px;
+}
+
 /* Contacts section */
+.contact-section {
+  padding-bottom: 96px;
+}
+
+.contact-container {
+  display: flex;
+  gap: 32px;
+}
+
+.contact-map {
+  flex-shrink: 0;
+  border: none;
+  border-radius: 16px;
+}
+
 .contacts-title {
   margin-bottom: 16px;
 }
 
 .contacts-section p {
   color: var(--color-brand-dark);
-}
-
-address li a {
-  font-weight: 300;
-  font-size: 16px;
-  color: var(--color-primary-light);
-  text-decoration: none;
 }
 
 /* Footer */
@@ -320,4 +382,36 @@ address li a {
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
+  padding: 32px 0;
+}
+
+.footer-container {
+  display: flex;
+  gap: 20px;
+}
+
+.footer-nav {
+  flex-basis: 50%;
+  display: flex;
+  gap: 20px;
+}
+
+.footer-address {
+  flex-basis: 50%;
+  display: flex;
+  gap: 20px;
+}
+
+.footer-menu,
+.footer-logo,
+.address-list,
+.address-info {
+  flex-grow: 1;
+}
+
+address a {
+  font-weight: 300;
+  font-size: 16px;
+  color: var(--color-primary-light);
+  text-decoration: none;
 }
