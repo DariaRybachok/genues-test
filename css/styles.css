@@ -124,6 +124,7 @@ a {
   text-align: center;
   color: var(--color-primary-light);
   text-decoration: none;
+  transition: COLOR 0.3s;
 }
 
 .link:hover {
@@ -131,6 +132,14 @@ a {
 }
 
 /* Header */
+.header {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  padding-top: 32px;
+}
+
 .header-container {
   display: flex;
   align-items: center;
@@ -154,7 +163,15 @@ a {
 /* Hero Section */
 .hero-section {
   padding: 272px 0;
-  background-image: url('../img/couple-in-bakery.jpg');
+  background:
+    linear-gradient(
+      127deg,
+      rgba(18, 18, 17, 0.78) 0%,
+      rgba(18, 18, 17, 0.6) 63.89%,
+      rgba(18, 18, 17, 0) 100%
+    ),
+    url('../img/couple-in-bakery.jpg');
+
   background-repeat: no-repeat;
   background-position: center top;
   background-size: cover;
@@ -328,6 +345,11 @@ a {
   border: 1px solid lightgray; /*remove*/
   border-radius: 16px;
   padding: 24px;
+  transition: transform 0.3s;
+}
+
+.cards:hover {
+  transform: scale(1.05);
 }
 
 .cards-name {
@@ -355,9 +377,17 @@ a {
   flex-shrink: 0;
 }
 
+.cards-button:hover {
+  background-color: var(--color-primary-dark);
+  color: var(--color-primary-light);
+}
 .cards-button img {
   height: 16px;
   width: 16px;
+}
+
+.cards-button.next {
+  transform: rotate(180deg);
 }
 
 /* Contacts section */
@@ -458,12 +488,18 @@ address a {
   display: flex;
   align-items: center;
   justify-content: center;
+  padding: 20px 0;
+  transition:
+    opacity 0.3s,
+    visibility 0.3s;
 }
 
 .modal {
   position: relative;
-  width: 880px;
-  height: 880px;
+  width: 100%;
+  max-width: 880px;
+  height: 100%;
+  max-height: 880px;
   background-color: var(--color-primary-light);
   border-radius: 32px;
 }
