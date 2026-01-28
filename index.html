@@ -129,8 +129,10 @@
         <div class="container">
           <h2 class="formats-title section-title centered">Формати</h2>
           <div class="formats-container">
-            <button class="cards-button" type="button">
-              <img src="./img/Arrow.svg" alt="cards-button" />
+            <button class="carousel-button" type="button">
+              <svg width="16" height="16">
+                <use href="./img/icons.svg#icon-Arrow"></use>
+              </svg>
             </button>
             <ul class="formats-list">
               <li class="formats-item">
@@ -164,8 +166,10 @@
                 </article>
               </li>
             </ul>
-            <button class="cards-button next" type="button">
-              <img src="./img/Arrow.svg" alt="cards-button" />
+            <button class="carousel-button next" type="button">
+              <svg width="16" height="16">
+                <use href="./img/icons.svg#icon-Arrow"></use>
+              </svg>
             </button>
           </div>
         </div>
@@ -178,7 +182,55 @@
                 Приєднуйся до мережі пекарень
               </h2>
               <p>Заповни форму, щоб ми звʼязались з тобою!</p>
-              <!-- form -->
+              <form name="contact-form" autocomplete="off">
+                <div class="form-field">
+                  <label class="form-label visually-hidden" for="user-name"
+                    >Ім'я</label
+                  >
+                  <input
+                    class="form-input"
+                    type="text"
+                    name="user-name"
+                    id="user-name"
+                    placeholder="Ім'я"
+                  />
+                </div>
+
+                <div class="form-field">
+                  <label class="form-label visually-hidden" for="user-tel"
+                    >Телефон</label
+                  >
+                  <input
+                    class="form-input"
+                    type="tel"
+                    name="user-tel"
+                    id="user-tel"
+                    placeholder="Телефон"
+                  />
+                </div>
+
+                <div class="form-field">
+                  <label class="form-label visually-hidden" for="user-email"
+                    >Електронна пошта</label
+                  >
+                  <input
+                    class="form-input"
+                    type="email"
+                    name="user-email"
+                    id="user-email"
+                    placeholder="Електронна пошта"
+                  />
+                </div>
+                <button class="form-button button" type="submit">
+                  Замовити дзвінок
+                </button>
+                <p class="form-terms">
+                  Натискаючи на кнопку я погоджуюсь з
+                  <a class="form-terms-link" href="#"
+                    >політикою конфіденційності
+                  </a>
+                </p>
+              </form>
             </div>
             <iframe
               class="contact-map"
@@ -226,12 +278,16 @@
               </li>
               <li>
                 <a href="#">
-                  <img src="./img/facebook.svg" alt="facebook" />
+                  <svg class="address-icon" width="32" height="32">
+                    <use href="./img/icons.svg#icon-facebook"></use>
+                  </svg>
                 </a>
               </li>
               <li>
                 <a href="#">
-                  <img src="./img/instagram.svg" alt="instagram" />
+                  <svg class="address-icon" width="32" height="32">
+                    <use href="./img/icons.svg#icon-instagram"></use>
+                  </svg>
                 </a>
               </li>
             </ul>
@@ -244,9 +300,58 @@
       </div>
     </footer>
 
-    <div class="backdrop is-hidden">
+    <div class="backdrop">
       <div class="modal">
         <button class="modal-btn-close" type="button">Close</button>
+        <h2>Замовити дзвінок</h2>
+        <p>Залишіть заявку та наш спеціаліст зв'яжеться з Вами!</p>
+        <form name="modal-form" autocomplete="off" novalidate>
+          <div class="form-field">
+            <label class="form-label visually-hidden" for="user-name"
+              >Ім'я</label
+            >
+            <input
+              class="form-input"
+              type="text"
+              name="user-name"
+              id="user-name"
+              placeholder="Ім'я"
+            />
+          </div>
+
+          <div class="form-field">
+            <label class="form-label visually-hidden" for="user-tel"
+              >Телефон</label
+            >
+            <input
+              class="form-input"
+              type="tel"
+              name="user-tel"
+              id="user-tel"
+              placeholder="Телефон"
+            />
+          </div>
+
+          <div class="form-field">
+            <label class="form-label visually-hidden" for="user-email"
+              >Електронна пошта</label
+            >
+            <input
+              class="form-input"
+              type="email"
+              name="user-email"
+              id="user-email"
+              placeholder="Електронна пошта"
+            />
+          </div>
+          <button class="form-button button" type="submit">
+            Замовити дзвінок
+          </button>
+          <p class="form-terms">
+            Натискаючи на кнопку я погоджуюсь з
+            <a class="form-terms-link" href="#">політикою конфіденційності </a>
+          </p>
+        </form>
       </div>
     </div>
 
