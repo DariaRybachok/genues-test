@@ -1,0 +1,10 @@
+.link {
+  text-align: center;
+  color: var(--color-primary-light);
+  text-decoration: none;
+  transition: COLOR 0.3s;
+}
+
+.link:hover {
+  color: var(--color-brand-normal);
+}
